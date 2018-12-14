@@ -42,11 +42,16 @@ class PaultatoPlayer extends Player
         // -------------------------------------    -----------------------------------------------------
         
         $nbRound = $this->result->getNbRound();
+        $gangDuT9 = array('Santost', 'Mattiashell', 'Vcollette');
+        $oppName = $this->result->getStatsFor($this->opponentSide)['name'];
 
-        if ($this->result->getNbRound() === 9)
+        if ($nbRound === 9) {
+            if (in_array($oppName, $gangDuT9))
+                return parent::friendChoice();
             return parent::foeChoice();
-        if ($nbRound != 0)
-        {
+        }
+
+        if ($nbRound != 0) {
             $foePercent = $this->result->getStatsFor($this->opponentSide)['foe'] / $nbRound;
             if ($foePercent > 0.5)
                 return parent::foeChoice();
