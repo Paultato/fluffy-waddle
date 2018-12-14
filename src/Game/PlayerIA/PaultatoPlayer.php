@@ -20,7 +20,7 @@ class PaultatoPlayer extends Player
         // Coucou Robin j'espère ta correction se passe bien et que tu me mettras 20 MERCI   
 
         // La famille TMTC 
-        $gangDuT9 = array('Santost', 'Mattiashell', 'Vcollette', 'Neosia67'); 
+        $gangDuT99 = array('Santost', 'Mattiashell', 'Vcollette', 'Neosia67'); 
         // Les ennemis de la nation
         $ennemis = array('Akatsuki95', 'Vegan60');
         // Détection du signal du serveur de calcul pour optimiser les probabilités centrées
@@ -33,8 +33,8 @@ class PaultatoPlayer extends Player
         $myScore = $this->result->getStatsFor($this->mySide)['score'];
 
         // On régale la famille TMTC
-        if ($nbRound === 9) {
-            if (in_array($oppName, $gangDuT9))
+        if ($nbRound === 99) {
+            if (in_array($oppName, $gangDuT99))
                 return parent::friendChoice();
             return parent::foeChoice();
         }
