@@ -48,7 +48,7 @@ class PaultatoPlayer extends Player
         
         $nbRound = $this->result->getNbRound();
         // La famille TMTC
-        $gangDuT9 = array('Santost', 'Mattiashell', 'Vcollette');
+        $gangDuT9 = array('Santost', 'Mattiashell', 'Vcollette', 'Neosia67');
         // Les ennemis de la nation
         $ennemis = array('Akatsuki95', 'Vegan60');
         // On apprend le nom de l'adversaire et si c'est pas la famille je le brise
