@@ -9,7 +9,7 @@ use Hackathon\Game\Result;
  * @package Hackathon\PlayerIA
  * @author PaulB
  */
-class PaultatoPlayer extends Player
+class RandPlayer extends Player
 {
     protected $mySide;
     protected $opponentSide;
@@ -41,16 +41,10 @@ class PaultatoPlayer extends Player
         // How can i display the result of each round ? $this->prettyDisplay()
         // -------------------------------------    -----------------------------------------------------
         
-        $nbRound = $this->result->getNbRound();
+        $randomized = rand(0, 100);
 
-        if ($this->result->getNbRound() === 9)
+        if ($randomized > 50)
             return parent::foeChoice();
-        if ($nbRound != 0)
-        {
-            $foePercent = $this->result->getStatsFor($this->opponentSide)['foe'] / $nbRound;
-            if ($foePercent > 0.5)
-                return parent::foeChoice();
-        }
         return parent::friendChoice();
     }
  
