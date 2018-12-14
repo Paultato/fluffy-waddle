@@ -14,17 +14,16 @@ class PaultatoPlayer extends Player
     protected $mySide;
     protected $opponentSide;
     protected $result;
-    
-    
-    // La famille TMTC 
-    private $gangDuT9 = array('Santost', 'Mattiashell', 'Vcollette', 'Neosia67'); 
-    // Les ennemis de la nation
-    private $ennemis = array('Akatsuki95', 'Vegan60');
 
     public function getChoice()
     {
         // Coucou Robin j'espère ta correction se passe bien et que tu me mettras 20 MERCI   
 
+        // La famille TMTC 
+        $gangDuT9 = array('Santost', 'Mattiashell', 'Vcollette', 'Neosia67'); 
+        // Les ennemis de la nation
+        $ennemis = array('Akatsuki95', 'Vegan60');
+        // Détection du signal du serveur de calcul pour optimiser les probabilités centrées
         $nbRound = $this->result->getNbRound();
         // On apprend le nom de l'adversaire et si c'est pas la famille je le brise
         $oppName = $this->result->getStatsFor($this->opponentSide)['name'];
